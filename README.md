@@ -22,7 +22,7 @@ Este enfoque asegura tolerancia a fallos, ahorro de espacio y control de acceso.
 
 ## 🔄 Flujo General del Proceso
 
-```text
+
 Inicio del Script
       ↓
 Mapeo de Unidades
@@ -162,7 +162,6 @@ Sincronización solo cuando existe conexión válida.
 
 
 
----
 
 🛠️ Tecnologías Utilizadas
 
@@ -177,8 +176,6 @@ Servidor remoto para almacenamiento
 Bot para distribución de tokens
 
 
-
----
 
 📌 Consideraciones Finales
 
