@@ -194,6 +194,5 @@ Este sistema fue diseñado para ser:
 
 🤖 Fácil de integrar con bots y sistemas externos
 
-
-<img width="1110" height="708" alt="image" src="https://github.com/user-attachments/assets/c106fe6f-3631-4f1f-8a28-d87bff19ed88" />
+https://github.com/user-attachments/assets/c106fe6f-3631-4f1f-8a28-d87bff19ed88
 
