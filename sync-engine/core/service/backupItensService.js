@@ -34,7 +34,7 @@ import Fila from "../filas/fila.js";
 export default async function backUpItens() {
   const pathZips = path.join("zipsFiles");
   const filesRead = await readjsfiles(pathZips);
-  console.log(filesRead);
+ 
   
 
   

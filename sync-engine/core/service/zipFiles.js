@@ -1,20 +1,19 @@
 import AdmZip from "adm-zip";
 
-import path from "node:path";
-import deleteItens from "../service/unlinkItens.js";
-import readsjfiles from "./readFile.js";
+
+import deleteItens from "./unlinkItens.js";
+import readsjfiles from "../utils/readFile.js";
+import pathJoins from "../utils/joinPats.js";
 
 export default async function zipItem() {
   const zip = new AdmZip();
   zip.addLocalFolder(`storage`);
 
+  const pathObjects = pathJoins(`storage`);
 
-  const pathObjects = path.join("zipsFiles");
-
-  
   const getItens = await readsjfiles(pathObjects);
 
-  const random = Math.floor(Math.random() *  1_000_000);
+  const random = Math.floor(Math.random() * 1_000_000);
 
   const v = getItens
     .join(` `)
@@ -28,10 +27,3 @@ export default async function zipItem() {
     }, 1000);
   }
 }
-
-
-
-
-
-
-
