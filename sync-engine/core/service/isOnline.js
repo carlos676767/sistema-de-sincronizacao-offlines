@@ -1,6 +1,6 @@
 import online from "is-online";
-import writeLogger from "../service/textLogger.js";
-import backUpItens from "../service/backupItensService.js";
+import writeLogger from "./textLogger.js";
+import backUpItens from "./backupItensService.js";
 
 export default async function onlineScript() {
 
