@@ -1,10 +1,11 @@
 import fs from "fs/promises";
 
 import readsjfiles from "../utils/readFile.js";
-import path from "node:path";
+import pathJoins from "../utils/joinPats.js";
+
 export default async function deleteItens(pathAbs) {
 
-    const pathObjects = path.join(pathAbs);
+    const pathObjects = pathJoins(pathAbs) ;
     const listObjects = await readsjfiles(pathObjects)
     
     
