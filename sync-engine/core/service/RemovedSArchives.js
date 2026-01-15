@@ -3,18 +3,20 @@ import path from "node:path";
 
 import Fila from "../filas/fila.js";
 import checkSizeDesktop from "./checkDiskService.js";
+import pathJoins from "../utils/joinPats.js";
 
 export default async function movedArchiles(pathAbs) {
-    const newpath = path.join("storage");
+    const newpath = pathJoins(`storage`);
 
     const hardDisk = await checkSizeDesktop()
-    const pathItens = path.join(hardDisk, "backupApp")
+    const pathItens =  pathJoins(hardDisk, `backupApp` )  
   
+
     
     for (const v of pathAbs) {
 
         const fileName = path.basename(v);      
-        const destino = path.join(newpath, fileName);  
+        const destino =  pathJoins(newpath, fileName);  
 
 
         const pathAbsItens = `${pathItens}` + `\\` + `${v}`
