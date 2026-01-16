@@ -1,27 +1,21 @@
 import fs from "fs/promises";
-import path from "node:path";
+
 
 import Fila from "../filas/fila.js";
 import checkSizeDesktop from "./checkDiskService.js";
 import pathJoins from "../utils/joinPats.js";
+import baseName from "../utils/pathBaseName.js";
 
 export default async function movedArchiles(pathAbs) {
     const newpath = pathJoins(`storage`);
 
     const hardDisk = await checkSizeDesktop()
     const pathItens =  pathJoins(hardDisk, `backupApp` )  
-  
-
     
-    for (const v of pathAbs) {
-
-        const fileName = path.basename(v);      
+    for (const archives of pathAbs) {
+        const fileName = baseName(archives)      
         const destino =  pathJoins(newpath, fileName);  
-
-
-        const pathAbsItens = `${pathItens}` + `\\` + `${v}`
-        
-       
+        const pathAbsItens = `${pathItens}` + `\\` + `${archives}`
         Fila.fila(   await fs.copyFile(pathAbsItens, destino)       )
     }
   
